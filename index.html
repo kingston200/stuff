@@ -19,6 +19,7 @@
         <li><a href="#player-stats">Player Stats</a></li>
         <li><a href="#about">About</a></li>
       </ul>
+      <button id="toggle-dark-mode">🌙 Dark Mode</button>
     </nav>
   </header>
 
@@ -26,111 +27,63 @@
   <section id="home">
     <h2>Welcome to the Detroit Lions 2024-25 Season Overview</h2>
     <p>Track all games, stats, and player performances here!</p>
-    <div id="overall-record">
-      <h3>Overall Record: <span id="win-loss-record">7-1</span></h3> <!-- Manually Update Here -->
+    <div id="overall-record" class="stats-box">
+      <h3>Overall Record: <span id="win-loss-record" class="animated-stat">5-2</span></h3> <!-- Manually Update Here -->
     </div>
   </section>
 
   <!-- Game Stats Section -->
   <section id="game-stats">
     <h2>Game Stats</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Opponent</th>
-          <th>Score</th>
-          <th>Result</th>
-        </tr>
-      </thead>
-      <tbody id="game-stats-table">
-        <!-- Manually Update Rows Here -->
-        <tr>
-          <td>Week 1</td>
-          <td>September 8, 2024</td>
-          <td>L.A Rams</td>
-          <td>26-20</td>
-          <td>Win</td>
-        </tr>
-        <tr>
-          <td>Week 2</td>
-          <td>September 15, 2024</td>
-          <td>T.B Buccaneers</td>
-          <td>16-20</td>
-          <td>Loss</td>
-          </tr>
-        <tr>
-          <td>Week 3</td>
-        <td>September 22, 2024</td>
-        <td>Arazona cardinals</td>
-        <td>20-13</td>
-        <td>Win</td>
-      </tr>
-      <tr>
-        <td>Week 4</td>
-        <td>September 30, 2024</td>
-        <td>Seattle Seahawks</td>
-        <td>42-29</td>
-        <td>Win</td>
-        </tr>
-        <tr>
-          <td>Week 5</td>
-          <td>October 13, 2024</td>
-          <td>Dallas Cowboys</td>
-          <td>47-9</td>
-          <td>Win</td>
-          </tr>
-          <tr>
-            <td>Week 6</td>
-            <td>October 20, 2024</td>
-            <td>Minnesota Vikings </td>
-            <td>31-29</td>
-            <td>Win</td>
-            </tr>
-            <tr>
-              <td>Week 7</td>
-              <td>October 27, 2024</td>
-              <td>Tennasse Titans</td>
-              <td>52-14</td>
-              <td>Win</td>
-              </tr>
-              <tr>
-                <td>Week 8</td>
-                <td>November 3, 2024</td>
-                <td>Green Bay packers</td>
-                <td>24-14</td>
-                <td>Win</td>
-                </tr>
-        <!-- Add more games manually -->
-      </tbody>
-    </table>
+    <div class="game-cards" id="game-cards-container">
+      <!-- Manually Update Cards Here -->
+      <div class="game-card">
+        <h3>Chicago Bears</h3>
+        <p>Date: September 8, 2024</p>
+        <p>Score: 30-24</p>
+        <p>Result: <span class="win">Win</span></p>
+      </div>
+      <div class="game-card">
+        <h3>Green Bay Packers</h3>
+        <p>Date: September 15, 2024</p>
+        <p>Score: 17-21</p>
+        <p>Result: <span class="loss">Loss</span></p>
+      </div>
+      <!-- Add more game cards here -->
+    </div>
   </section>
 
   <!-- Team Stats Section -->
   <section id="team-stats">
     <h2>Team Stats</h2>
-    <ul>
-      <li>Offensive Rank: <span>7th</span></li> <!-- Manually Update Here -->
-      <li>Defensive Rank: <span>8th</span></li> <!-- Manually Update Here -->
-      <li>Points Scored: <span>258</span></li>  <!-- Manually Update Here -->
-      <li>Points Allowed: <span>148</span></li> <!-- Manually Update Here -->
-      <li>Total Yards: <span>3113</span></li>    <!-- Manually Update Here -->
-    </ul>
+    <div class="stats-box">
+      <ul>
+        <li>Offensive Rank: <span id="offensive-rank" class="animated-stat">8th</span></li>
+        <li>Defensive Rank: <span id="defensive-rank" class="animated-stat">15th</span></li>
+        <li>Points Scored: <span id="points-scored" class="animated-stat">150</span></li>
+        <li>Points Allowed: <span id="points-allowed" class="animated-stat">120</span></li>
+        <li>Total Yards: <span id="total-yards" class="animated-stat">3000</span></li>
+      </ul>
+    </div>
   </section>
 
   <!-- Player Stats Section -->
   <section id="player-stats">
     <h2>Player Stats</h2>
-    <ul id="player-list">
-      <!-- Manually Update Here -->
-      <li>Passing Leader Jared Goff (QB) - GP 8 Touchdowns: 14, Yards: 1840</li>
-      <li>Receiving Leader Amon-Ra St. Brown (WR) - GP 8 Touchdowns: 6, Receiving Yards: 464</li>
-      <li>Rushing Leader Jahmyr Gibbs (RB) - GP 8 Touchdowns: 7, Rushing Yards: 656</li>
-      <li>Defensive Leader "LB" Jack Campbell (LB) - GP 8 Total Tackles: 62, Sacks: 0</li>
-      <li>Defensive Leader "S" Kerby Joseph (S) - GP 8 Total Tackles: 43, INT: 6</li>
-      <li>Defensive Leader "DE" Adin Hutchinson (DE) - GP 5 Total Tackles: 19, Sacks: 7.5</li>
-      <!-- Add more players manually -->
-    </ul>
+    <div class="player-cards" id="player-cards-container">
+      <!-- Player cards -->
+      <div class="player-card">
+        <h3>Jared Goff (QB)</h3>
+        <p>Touchdowns: 10</p>
+        <p>Yards: 2000</p>
+      </div>
+      <div class="player-card">
+        <h3>Amon-Ra St. Brown (WR)</h3>
+        <p>Touchdowns: 5</p>
+        <p>Receiving Yards: 900</p>
+      </div>
+      <!-- Add more player cards here -->
+    </div>
   </section>
 
   <!-- About Section -->
@@ -144,10 +97,8 @@
       This season, the Lions are focused on improving their playoff contention and aiming for a deep run. With star players like Jared Goff, Amon-Ra St. Brown, and an improving defense, 
       the Lions are setting their sights on the top of the NFC North.
     </p>
-    <p>
-      Track the team’s progress, key stats, and standout players right here as the season unfolds.
-    </p>
   </section>
 
+  <script src="script.js"></script>
 </body>
 </html>

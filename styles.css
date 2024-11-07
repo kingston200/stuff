@@ -1,20 +1,24 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f3f3f3;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
   }
   
   header {
-    background-color: #0076b6;
-    color: white;
+    background: linear-gradient(45deg, #0076b6, #0096ff);
     padding: 1em;
     text-align: center;
+    color: white;
   }
   
   nav ul {
     list-style: none;
     padding: 0;
+    display: inline-block;
   }
   
   nav ul li {
@@ -28,46 +32,112 @@ body {
     font-weight: bold;
   }
   
-  h2 {
-    color: #0076b6;
+  button#toggle-dark-mode {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: 20px;
+    font-size: 1.2em;
   }
   
+  /* Section Styling */
   section {
     padding: 2em;
     margin: 1em 0;
   }
   
-  table {
-    width: 100%;
-    border-collapse: collapse;
+  h2 {
+    color: #0076b6;
   }
   
-  table, th, td {
-    border: 1px solid #ddd;
-  }
-  
-  th, td {
-    padding: 8px;
-    text-align: left;
-  }
-  
-  th {
-    background-color: #0076b6;
-    color: white;
-  }
-  
-  #overall-record {
-    font-size: 1.5em;
-    margin-top: 20px;
-  }
-  
-  #player-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  #about p {
-    margin-bottom: 1.5em;
+  p {
     line-height: 1.6;
   }
   
+  .stats-box {
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .stats-box:hover {
+    transform: translateY(-5px);
+  }
+  
+  .animated-stat {
+    font-size: 2em;
+    color: #0076b6;
+    transition: all 0.3s ease;
+  }
+  
+  /* Game Cards */
+  .game-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .game-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 30px);
+    transition: transform 0.3s ease;
+  }
+  
+  .game-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .win {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .loss {
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* Player Cards */
+  .player-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .player-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 30px);
+    transition: transform 0.3s ease;
+  }
+  
+  .player-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    background-color: #222;
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode header {
+    background: linear-gradient(45deg, #005f8a, #007bce);
+  }
+  
+  body.dark-mode .stats-box,
+  body.dark-mode .game-card,
+  body.dark-mode .player-card {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255,) 
+  }
