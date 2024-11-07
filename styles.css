@@ -30,25 +30,41 @@ body {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #ffcc00;
   }
   
   button#toggle-dark-mode {
     background: none;
-    border: none;
+    border: 2px solid white;
+    border-radius: 5px;
     color: white;
     cursor: pointer;
     margin-left: 20px;
     font-size: 1.2em;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  button#toggle-dark-mode:hover {
+    background-color: #ffffff;
+    color: #0076b6;
   }
   
   /* Section Styling */
   section {
     padding: 2em;
     margin: 1em 0;
+    text-align: center;
   }
   
   h2 {
     color: #0076b6;
+    font-size: 2em;
+    margin-bottom: 1em;
   }
   
   p {
@@ -61,7 +77,8 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     margin-bottom: 20px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: inline-block;
   }
   
   .stats-box:hover {
@@ -78,6 +95,7 @@ body {
   .game-cards {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 15px;
   }
   
@@ -87,11 +105,18 @@ body {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     flex: 1 1 calc(33.333% - 30px);
-    transition: transform 0.3s ease;
+    max-width: 300px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: left;
   }
   
   .game-card:hover {
     transform: scale(1.05);
+  }
+  
+  .game-card h3 {
+    color: #0076b6;
+    margin-bottom: 10px;
   }
   
   .win {
@@ -108,6 +133,7 @@ body {
   .player-cards {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 15px;
   }
   
@@ -117,11 +143,17 @@ body {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     flex: 1 1 calc(33.333% - 30px);
-    transition: transform 0.3s ease;
+    max-width: 300px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
   }
   
   .player-card:hover {
     transform: scale(1.05);
+  }
+  
+  .player-card h3 {
+    color: #0076b6;
+    margin-bottom: 10px;
   }
   
   /* Dark Mode */
@@ -139,5 +171,24 @@ body {
   body.dark-mode .player-card {
     background-color: #333;
     color: #fff;
-    box-shadow: 0 0 10px rgba(255, 255,) 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
   }
+  
+  body.dark-mode button#toggle-dark-mode {
+    border-color: #0076b6;
+    color: #0076b6;
+  }
+  
+  body.dark-mode button#toggle-dark-mode:hover {
+    background-color: #0076b6;
+    color: white;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .game-card, .player-card {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+  
