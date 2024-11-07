@@ -1,12 +1,18 @@
 /* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f3f3f3;
-    color: #333;
-    transition: background-color 0.3s, color 0.3s;
+:root {
+    --background-color-light: #f3f3f3;
+    --text-color-light: #333;
+    --primary-color-light: #0076b6;
+    --highlight-color-light: #ffcc00;
   }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
   
   h1, h2 {
     color: #0040A1;
@@ -17,6 +23,18 @@ body {
     color: #0040A1;
     font-size: 1.2em;
     margin-bottom: 10px;
+  }
+  button#toggle-dark-mode {
+    background-color: var(--highlight-color-light);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button#toggle-dark-mode:hover {
+    background-color: #ff9800;
   }
   
   a {
@@ -29,11 +47,11 @@ body {
     margin-bottom: 20px;
   }
   
+
   header {
-    background: linear-gradient(45deg, #0076b6, #0096ff);
+    background: linear-gradient(45deg, var(--primary-color-light), #00aaff);
     padding: 1em;
     text-align: center;
-    color: white;
   }
   
   nav ul {
@@ -67,27 +85,27 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
-  
+
   button#toggle-dark-mode:hover {
-    background-color: var(--highlight-color-dark);
+    background-color: #ff9800;
   }
   
-  /* Dark Mode */
-  body.dark-mode {
-    background-color: var(--background-color-dark);
-    color: var(--text-color-dark);
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
   }
   
   header.dark-mode {
-    background: linear-gradient(45deg, var(--primary-color-dark), var(--primary-color-light));
-  }
-  
-  nav ul li a.dark-mode {
-    color: var(--text-color-dark);
+    background: linear-gradient(45deg, #00aaff, var(--primary-color-light));
   }
   
   button#toggle-dark-mode.dark-mode {
-    background: var(--highlight-color-dark);
+    background-color: #ff9800;
+  }
+  
+  button#toggle-dark-mode.dark-mode:hover {
+    background-color: #ffcc00;
   }
   
   section.dark-mode {
@@ -279,8 +297,6 @@ body {
       font-size: 0.9em;
     }
   
-    button#toggle-dark-mode {
-      padding: 8px 16px;
-    }
+
   }
   

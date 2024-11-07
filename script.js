@@ -27,17 +27,26 @@ const gameStats = [
   }
   
   // Function to toggle dark mode
-  function toggleDarkMode() {
-    const body = document.body;
-    const darkModeButton = document.getElementById('toggle-dark-mode');
-  
-    body.classList.toggle('dark-mode');
-    darkModeButton.classList.toggle('dark-mode');
+function toggleDarkMode() {
+    const body = document.body;  // Get the body element
+    const darkModeButton = document.getElementById('toggle-dark-mode');  // Get the dark mode button
     
-    // Also update link colors in the navigation
-    const navLinks = document.querySelectorAll('nav ul li a');
-    navLinks.forEach(link => link.classList.toggle('dark-mode'));
+    body.classList.toggle('dark-mode');  // Toggle dark mode on the body
+    darkModeButton.classList.toggle('dark-mode');  // Toggle dark mode on the button
   }
+  
+  // Event listener for dark mode button
+  document.getElementById('toggle-dark-mode').addEventListener('click', toggleDarkMode);
+  
+  // Optionally, you can set the initial theme preference based on localStorage or default to light mode
+  document.addEventListener("DOMContentLoaded", () => {
+    // Uncomment to use localStorage preference for dark mode:
+    // if (localStorage.getItem('dark-mode') === 'enabled') {
+    //   document.body.classList.add('dark-mode');
+    //   document.getElementById('toggle-dark-mode').classList.add('dark-mode');
+    // }
+  });
+  
   
   // Event listener for dark mode button
   document.getElementById('toggle-dark-mode').addEventListener('click', toggleDarkMode);
