@@ -34,6 +34,7 @@ body {
   
   section {
     padding: 2em;
+    margin: 1em 0;
   }
   
   table {
@@ -63,5 +64,10 @@ body {
   #player-list {
     list-style: none;
     padding: 0;
+  }
+  
+  #about p {
+    margin-bottom: 1.5em;
+    line-height: 1.6;
   }
   
