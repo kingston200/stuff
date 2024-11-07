@@ -60,7 +60,7 @@ body {
   }
   
   button#toggle-dark-mode {
-    background: #ffcc00;
+    background: var(--highlight-color-light);
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
@@ -69,8 +69,33 @@ body {
   }
   
   button#toggle-dark-mode:hover {
-    background-color: #ffc107;
+    background-color: var(--highlight-color-dark);
   }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+  }
+  
+  header.dark-mode {
+    background: linear-gradient(45deg, var(--primary-color-dark), var(--primary-color-light));
+  }
+  
+  nav ul li a.dark-mode {
+    color: var(--text-color-dark);
+  }
+  
+  button#toggle-dark-mode.dark-mode {
+    background: var(--highlight-color-dark);
+  }
+  
+  section.dark-mode {
+    background-color: #1f1f1f;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Add other sections' dark mode styles here */
   
   /* Home Section */
   #home {
