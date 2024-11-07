@@ -1,9 +1,8 @@
 /* General Styles */
 :root {
-    --background-color-light: #f3f3f3;
-    --text-color-light: #333;
-    --primary-color-light: #0076b6;
-    --highlight-color-light: #ffcc00;
+    --background-color-light: #000000;
+    --text-color-light: #0076b6;
+    --primary-color-light: #0076B6;
   }
   
   body {
@@ -20,22 +19,12 @@
   }
   
   h3 {
-    color: #0040A1;
+    color: #000000;
     font-size: 1.2em;
     margin-bottom: 10px;
   }
-  button#toggle-dark-mode {
-    background-color: var(--highlight-color-light);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 16px;
-  }
   
-  button#toggle-dark-mode:hover {
-    background-color: #ff9800;
-  }
+  
   
   a {
     text-decoration: none;
@@ -118,7 +107,7 @@ body.dark-mode {
   /* Home Section */
   #home {
     text-align: center;
-    background-color: #ffffff;
+    background-color: #000000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     margin: 20px;
@@ -127,7 +116,7 @@ body.dark-mode {
   
   .stats-box {
     background-color: #0076b6;
-    color: white;
+    color: black;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -151,7 +140,7 @@ body.dark-mode {
   }
   
   .game-card {
-    background-color: #ffffff;
+    background-color: #0076B6;
     padding: 15px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -197,7 +186,7 @@ body.dark-mode {
   
   .stats-box {
     background-color: #0076b6;
-    color: white;
+    color: black;
     padding: 15px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -225,7 +214,7 @@ body.dark-mode {
   }
   
   .player-card {
-    background-color: #ffffff;
+    background-color: #0076B6;
     padding: 15px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -250,7 +239,7 @@ body.dark-mode {
   
   /* About Section */
   #about {
-    background-color: #ffffff;
+    background-color: #0076B6;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     margin: 20px;
@@ -261,7 +250,7 @@ body.dark-mode {
   #about p {
     font-size: 1.1em;
     line-height: 1.6em;
-    color: #333;
+    color: #000000;
   }
   
   /* Responsive Styles */
