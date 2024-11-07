@@ -44,4 +44,8 @@ const games = [
     loadGameStats();
     loadPlayerStats();
   };
-  
+  // JavaScript to toggle dark mode
+const toggleDarkModeBtn = document.getElementById('toggle-dark-mode');
+toggleDarkModeBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+});

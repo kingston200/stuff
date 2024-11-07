@@ -8,6 +8,27 @@ body {
     transition: background-color 0.3s, color 0.3s;
   }
   
+  h1, h2 {
+    color: #0040A1;
+    text-align: center;
+  }
+  
+  h3 {
+    color: #0040A1;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  section {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
   header {
     background: linear-gradient(45deg, #0076b6, #0096ff);
     padding: 1em;
@@ -18,12 +39,13 @@ body {
   nav ul {
     list-style: none;
     padding: 0;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
   }
   
   nav ul li {
     display: inline;
-    margin: 0 15px;
   }
   
   nav ul li a {
@@ -38,157 +60,202 @@ body {
   }
   
   button#toggle-dark-mode {
-    background: none;
-    border: 2px solid white;
-    border-radius: 5px;
-    color: white;
+    background: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
     cursor: pointer;
-    margin-left: 20px;
-    font-size: 1.2em;
-    padding: 5px 10px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease;
   }
   
   button#toggle-dark-mode:hover {
-    background-color: #ffffff;
-    color: #0076b6;
+    background-color: #ffc107;
   }
   
-  /* Section Styling */
-  section {
-    padding: 2em;
-    margin: 1em 0;
+  /* Home Section */
+  #home {
     text-align: center;
-  }
-  
-  h2 {
-    color: #0076b6;
-    font-size: 2em;
-    margin-bottom: 1em;
-  }
-  
-  p {
-    line-height: 1.6;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin: 20px;
+    padding: 20px;
   }
   
   .stats-box {
+    background-color: #0076b6;
+    color: white;
     padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    display: inline-block;
-  }
-  
-  .stats-box:hover {
-    transform: translateY(-5px);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
   
   .animated-stat {
+    font-weight: bold;
     font-size: 2em;
-    color: #0076b6;
-    transition: all 0.3s ease;
   }
   
-  /* Game Cards */
+  /* Game Stats Section */
+  #game-stats {
+    text-align: center;
+  }
+  
   .game-cards {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
-    gap: 15px;
   }
   
   .game-card {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(33.333% - 30px);
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: calc(100% / 2 - 40px);
     max-width: 300px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    text-align: left;
+    transition: transform 0.3s ease;
   }
   
   .game-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
   }
   
   .game-card h3 {
-    color: #0076b6;
+    font-size: 1.2em;
     margin-bottom: 10px;
   }
   
-  .win {
-    color: green;
+  .game-card p {
+    font-size: 1em;
+    margin: 5px 0;
+  }
+  
+  .game-card .win {
+    color: #28a745;
     font-weight: bold;
   }
   
-  .loss {
-    color: red;
+  .game-card .loss {
+    color: #dc3545;
     font-weight: bold;
   }
   
-  /* Player Cards */
+  /* Team Stats Section */
+  #team-stats {
+    text-align: center;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+  }
+  
+  .stats-box {
+    background-color: #0076b6;
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stats-box h3 {
+    font-size: 1.1em;
+  }
+  
+  .stats-box p {
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+  
+  /* Player Stats Section */
+  #player-stats {
+    text-align: center;
+  }
+  
   .player-cards {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
-    gap: 15px;
   }
   
   .player-card {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(33.333% - 30px);
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: calc(100% / 2 - 40px);
     max-width: 300px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease;
   }
   
   .player-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
   }
   
   .player-card h3 {
-    color: #0076b6;
+    font-size: 1.2em;
     margin-bottom: 10px;
   }
   
-  /* Dark Mode */
-  body.dark-mode {
-    background-color: #222;
-    color: #f0f0f0;
+  .player-card p {
+    font-size: 1em;
+    margin: 5px 0;
   }
   
-  body.dark-mode header {
-    background: linear-gradient(45deg, #005f8a, #007bce);
+  /* About Section */
+  #about {
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
   }
   
-  body.dark-mode .stats-box,
-  body.dark-mode .game-card,
-  body.dark-mode .player-card {
-    background-color: #333;
-    color: #fff;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  #about p {
+    font-size: 1.1em;
+    line-height: 1.6em;
+    color: #333;
   }
   
-  body.dark-mode button#toggle-dark-mode {
-    border-color: #0076b6;
-    color: #0076b6;
-  }
-  
-  body.dark-mode button#toggle-dark-mode:hover {
-    background-color: #0076b6;
-    color: white;
-  }
-  
-  /* Responsive Design */
+  /* Responsive Styles */
   @media (max-width: 768px) {
     .game-card, .player-card {
-      flex: 1 1 100%;
-      max-width: 100%;
+      width: 100%;
+    }
+  
+    .game-cards, .player-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.8em;
+    }
+  
+    h2 {
+      font-size: 1.5em;
+    }
+  
+    .game-card h3, .player-card h3, .stats-box h3 {
+      font-size: 1.1em;
+    }
+  
+    .game-card p, .player-card p, .stats-box p {
+      font-size: 0.9em;
+    }
+  
+    button#toggle-dark-mode {
+      padding: 8px 16px;
     }
   }
   
